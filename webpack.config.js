@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin   = require('mini-css-extract-plugin'); // 分离 CSS
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');    // 清理输出
 var   HtmlWebpackPlugin      = require('html-webpack-plugin');     // Html 模板注入
+const CopyWebpackPlugin      = require('copy-webpack-plugin');     // 拷贝静态资源
 const path = require('path')
 
 module.exports = {
@@ -78,6 +79,11 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.join(__dirname, 'static') }
+      ]
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'html/index.html'), // 这里改为你要调教的模板
