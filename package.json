@@ -1,0 +1,29 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "web dev playground",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev-build": "webpack --mode=development",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "playground"
+  ],
+  "author": "literal kernel",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.2",
+    "html-webpack-plugin": "^4.4.1",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.0",
+    "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
